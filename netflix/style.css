@@ -24,7 +24,7 @@ body {
     margin: 1.5rem;
 }
 
-.first-section header .nav-box #language {
+#language {
     color: rgb(214, 213, 213);
     outline: none;
     padding: 0.25rem 0.5rem;
@@ -32,12 +32,11 @@ body {
     height: 35px;
     margin-top: 0.35rem;
     border-radius: 4px;
-    border: 1px solid white;
+    border: 2.5px solid white;
     margin-left: 65%;
     background: transparent;
 }
-
-.first-section header .nav-box select option {
+#language option {
     background-color: rgb(89, 84, 84);
 }
 
@@ -72,18 +71,15 @@ body {
     text-align: center;
     font-family: 'Rubik', sans-serif;
 }
-
-.first-section .unlimited-movies #p1 {
+#p1 {
     font-size: 60px;
     margin-left: 20%;
     margin-right: 20%;
 }
-
-.first-section .unlimited-movies #p2 {
+#p2 {
     font-size: 30px;
 }
-
-.first-section .unlimited-movies #p3 {
+#p3 {
     font-size: 20px;
 }
 
@@ -106,8 +102,7 @@ body {
     border-width: 2px;
     border-style: inset;
 }
-
-.first-section .unlimited-movies span #started-btn {
+#started-btn {
     width: 20%;
     background-color: #e50914;
     color: white;
@@ -143,7 +138,7 @@ body {
 .second-section .text-div #large-text {
     font-size: 50px;
     text-align: left;
-
+    flex-basis: 50%;
 }
 
 .second-section .text-div #small-text {
@@ -159,41 +154,105 @@ body {
 }
 
 /* Frequently Asked Questions starts from here */
-.faq {
+.faq{
+    padding: 10px 12%;
     text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    border: 0px solid white;
+    font-size: 18px;
     color: white;
+    margin-top: 2rem;
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
     font-family: 'Rubik', sans-serif;
 }
-
-.faq p {
-    margin-top: 2rem;
-    font-size: 50px;
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
 }
-.faq .questionnaires{
-    margin-top: 2rem;
-    height: 600px;
-    width: 70%;
-    margin-bottom: 20px;
-    text-align: left;
-    font-size: 30px;
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
 }
-.faq .questionnaires .question{
+.accordion li label{
     display: flex;
-    flex-direction: column;
-    background-color: rgb(61, 58, 58);
-    padding: 10px;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #302f2f;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
 }
-.faq .questionnaires .answer{
+label::after{
+    content: '+';
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
     display: none;
 }
-/*  
-    responsive
+.accordion .content{
+    background: #302f2f;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
 
-#first-section header .nav-box select{
-    margin-left: 40%;} */
+/* Frequently Asked Questions done */
+
+/* footer starts */
+.footer{
+    padding: 50px 15% 10px;
+    color: white;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+.footer .row{
+    display: flex;
+    flex-direction: row;
+}
+.footer .column{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .column a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#language2{
+    color: rgb(214, 213, 213);
+    outline: none;
+    padding: 0.25rem 0.5rem;
+    font-size: .9rem;
+    height: 35px;
+    margin-top: 0.35rem;
+    border-radius: 4px;
+    border: 2.5px solid white;
+    background: transparent;
+}
+#language2 option {
+    background-color: rgb(89, 84, 84);
+}
