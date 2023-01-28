@@ -1,46 +1,161 @@
-*{
+* {
     margin: 0;
-    /* font-family: 'Poppins', sans-serif; */
 }
-body{
+
+body {
     background-color: black;
 }
-#first-section{
+
+#first-section {
     background-size: 100% 100%;
     background-image: url(./images/background.jpg);
 }
-#first-section .nav-box{
+
+#first-section .nav-box {
     width: 100%;
-    height: auto;
-    
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-#first-section header .nav-box img{
-    height: 1.5rem;
-    margin: 1rem;
+
+#first-section header .nav-box img {
+    height: 2.2rem;
+    margin: 1.5rem;
 }
-#first-section header .nav-box select{
-    color: white;
-    font-size: 1.2rem;
+
+#first-section header .nav-box #language {
+    color: rgb(214, 213, 213);
     outline: none;
+    padding: 0.25rem 0.5rem;
+    font-size: .9rem;
+    height: 35px;
+    margin-top: 0.35rem;
+    border-radius: 4px;
     border: 1px solid white;
-    margin-left: 70%;
+    margin-left: 65%;
     background: transparent;
 }
-#first-section header .nav-box select option{
+
+#first-section header .nav-box select option {
     background-color: rgb(89, 84, 84);
 }
-#first-section header .nav-box #signInBtn{
+
+#first-section header .nav-box #signInBtn {
     color: white;
-    background-color: red;
+    background-color: #e50914;
     font-size: 1rem;
+    cursor: pointer;
     height: 35px;
     width: 80px;
-    border-radius:3px;
     outline: none;
     border: 0px solid rgb(0, 0, 0);
+    float: right;
+    font-weight: 400;
+    line-height: normal;
+    padding: 7px 17px;
+    float: none;
+    margin-top: 0;
+    margin-left: 10px;
+    white-space: nowrap;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    letter-spacing: 0 !important;
+    border-radius: 3px;
 }
-#first-section .unlimited-movies{
+
+/* header done */
+
+#first-section .unlimited-movies {
     color: white;
     align-items: center;
     text-align: center;
+    font-family: 'Rubik', sans-serif;
 }
+
+#first-section .unlimited-movies #p1 {
+    font-size: 60px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#first-section .unlimited-movies #p2 {
+    font-size: 30px;
+}
+
+#first-section .unlimited-movies #p3 {
+    font-size: 20px;
+}
+
+.email-input {
+    height: 3rem;
+    width: 50%;
+    border: 1px solid #8c8c8c;
+    border-radius: 2px;
+    color: #000;
+    font-size: 20px;
+    outline: none;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    cursor: text;
+    border-width: 2px;
+    border-style: inset;
+}
+
+#first-section .unlimited-movies span #started-btn {
+    width: 20%;
+    background-color: #e50914;
+    color: white;
+    height: 3rem;
+    font-size: 1.3rem;
+}
+
+.separator-line {
+    width: 100%;
+    border: 3px solid rgba(255, 254, 254, 0.534);
+}
+
+/* done up to email entry and get started button */
+
+/* second section starts */
+#second-section {
+    color: white;
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    height: 500px;
+}
+
+#second-section .text-div {
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#second-section .text-div #large-text {
+    font-size: 50px;
+}
+#second-section .text-div #small-text {
+    font-size: 20px;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+}
+#second-section .img-box {
+    height: auto;
+    width: 50%;
+}
+
+
+
+/*  
+    responsive
+
+#first-section header .nav-box select{
+    margin-left: 40%;} */
