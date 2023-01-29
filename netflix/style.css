@@ -3,7 +3,6 @@
 }
 
 body {
-    overflow-x: hidden;
     background-color: rgb(0, 0, 0);
 }
 
@@ -297,10 +296,11 @@ input[type="radio"] {
 
 
 /* --------- responsive ------- */
+/* ----- small screen starts here----- */
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
     #language {
-        margin-left: 28%;
+        margin-left: 30%;
     }
     .input-div{
         display: flex;
@@ -362,23 +362,155 @@ input[type="radio"] {
 
 }
 
+/* -------medium screen starts here------ */
 
-
-
-
-/* 
-@media screen and (max-width: 768px) {
-    body {}
+@media screen and (min-width: 768px) {
+    #language{
+        margin-left: 55%;
+    }
+    #p1{
+        margin-top: 50px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #started-btn{
+        font-size: 2vh;
+    }
+    .second-section {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        margin-left: 30px;
+        align-items: center;
+        padding-left: 100px;
+    }
+    .second-section .text-div #large-text{
+        font-size: 50px;
+        width: 100%;
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+    .second-section .text-div #small-text{
+        font-size: 30px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .second-section .img-box{
+        width: 100%;
+    }
+    .second-section .img-box img{
+        width: 100%;
+    }
+    .faq ul{
+        padding-left: 10px;
+    }
+    .faq #started-btn{
+        width: 20%;
+        font-size: 1.6vh;
+    }
 }
 
-@media screen and (max-width: 992px) {
-    body {}
+/* --- large screen starts here---- */
+
+@media screen and (min-width: 992px) {
+    #language{
+        margin-left: 65%;
+    }
+    #p1{
+        margin-top: 50px;
+        font-size: 80px;
+    }
+    #p2{
+        font-size: 45px;
+    }
+    #p3{
+        font-size: 25px;
+    }
+    #started-btn{
+        font-size: 2.5vh;
+    }
+    .second-section {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        margin-left: 30px;
+        align-items: center;
+        padding-left: 100px;
+    }
+    .second-section .text-div #large-text{
+        font-size: 40px;
+        width: 100%;
+    }
+    .second-section .text-div #small-text{
+        font-size: 30px;
+        width: 100%;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .second-section .img-box{
+        width: 100%;
+    }
+    .second-section .img-box img{
+        width: 100%;
+    }
+    .faq ul{
+        padding-left: 10px;
+    }
+    .faq #started-btn{
+        width: 20%;
+        font-size: 1.6vh;
+    }
+
 }
 
-@media screen and (max-width: 1200px) {
-    body {}
-}
+/*----- extra large screen stats here -----*/
 
-@media screen and (max-width: 1400px) {
-    body {}
-} */
+@media screen and (min-width: 1200px) {
+    #language{
+        margin-left: 70%;
+    }
+    #p1{
+        font-size: 100px;
+        margin-top: 50px;
+    }
+    #p2{
+        font-size: 50px;
+    }
+    #p3{
+        font-size: 20px;
+    }
+    #started-btn{
+        font-size: 2.5vh;
+    }
+    .second-section {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        margin-left: 30px;
+        align-items: center;
+        padding-left: 100px;
+    }
+    .second-section .text-div #large-text{
+        font-size: 60px;
+        width: 100%;
+    }
+    .second-section .text-div #small-text{
+        font-size: 30px;
+        width: 100%;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .second-section .img-box{
+        width: 100%;
+    }
+    .second-section .img-box img{
+        width: 100%;
+    }
+    .faq ul{
+        padding-left: 10px;
+    }
+    .faq #started-btn{
+        width: 20%;
+        font-size: 1.6vh;
+    }
+}
