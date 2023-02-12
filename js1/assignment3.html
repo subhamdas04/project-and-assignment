@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 - Javascript</title>
+</head>
+
+<body>
+    <script>
+        class restaurantManager {
+            restaurantList = [{
+                id: 1,
+                restaurantName: "Eat More",
+                address: 'Hailakandi',
+                city: "Assam"
+            },
+            {
+                id: 2,
+                restaurantName: "Park Land",
+                address: 'Bolangir',
+                city: "Odisha"
+            },
+            {
+                id: 3,
+                restaurantName: "Kouzina",
+                address: 'Bose road',
+                city: "Kolkata"
+            },
+            {
+                id: 4,
+                restaurantName: "Subway",
+                address: 'Cantonment',
+                city: "Mumbai"
+            }];
+
+            printAllRestaurantNames = ()=>{
+                return this.restaurantList.map(restaurant => restaurant.restaurantName);
+            }
+
+            filterRestaurantsByCity = (cityname) => {
+                return this.restaurantList.filter(restaurant => restaurant.city == cityname);
+            }
+        }
+
+        const restaurantObject = new restaurantManager();
+
+        const output1 = restaurantObject.printAllRestaurantNames();
+        console.log(output1);
+
+      //  console.log(restaurantObject.filterRestaurantsByCity("Mumbai"));
+    </script>
+
+    <!-- ------------------------------------------ -->
+
+    <script>
+        orderData = {
+            'Below 500': 20,
+            '500-1000': 29,
+            '1000-1500': 30,
+            '1500-2000': 44,
+            'Above 2000': 76
+        };
+        // soluton of (a)
+
+        const sum = Object.values(orderData).reduce((prev, next) => prev + next);
+        console.log(sum);
+
+        // solution of b
+        const length = Object.keys(orderData).length;
+        const headers = Object.keys(orderData);
+        console.log(length);
+
+        // solution of c
+
+        let array = [];
+        const response = headers.map((item, index) => {
+             const obj = {
+                    'id': index + 1,
+                    'order': item,
+                    'orderpercentage':((orderData[item]/sum)*100).toFixed(2),
+                    'restaurant': 'Punjabi Tadka'
+             }
+             array.push(obj);
+        })
+        console.log(array);
+
+    </script>
+
+
+
+</body>
+
+</html>
